@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
 	[Tooltip("Type of bullet")]
 	[SerializeField]private GameObject bulletPrefab;
 	[Tooltip("The delay between shots")]
-	[SerializeField]private float timebetweenShots = .3f;
+	[SerializeField]private float timeBetweenShots = .3f;
 	[Tooltip("The speed of the bullet")]
 	[SerializeField]private float bulletSpeed = 100f;
 	[Tooltip("How far the bullet goes")]
@@ -41,7 +41,7 @@ public class Weapon : MonoBehaviour
 	{
 		canShoot = false;
 		ProcessShot();
-		yield return new WaitForSeconds(timebetweenShots);
+		yield return new WaitForSeconds(timeBetweenShots);
 		canShoot = true;
 	}
 	

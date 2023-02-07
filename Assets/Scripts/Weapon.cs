@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
 	[SerializeField]private Transform bulletPoint;
 	[Tooltip("Type of bullet")]
 	[SerializeField]private GameObject bulletPrefab;
+	[Tooltip("Hit effect when the bullet hits the enemy")]
+	[SerializeField]private GameObject hitEffect;
 	[Tooltip("The delay between shots")]
 	[SerializeField]private float timeBetweenShots = .3f;
 	[Tooltip("The speed of the bullet")]
@@ -33,7 +35,7 @@ public class Weapon : MonoBehaviour
 		if (input.shoot && canShoot)
 		{
 			StartCoroutine(Shoot());
-            input.shoot = false;
+			input.shoot = false;
 		} 
 	}
 	

@@ -10,16 +10,23 @@ public class Weapon : MonoBehaviour
 	[SerializeField]private Transform bulletPoint;
 	[Tooltip("Type of bullet")]
 	[SerializeField]private GameObject bulletPrefab;
-	[Tooltip("Hit effect when the bullet hits the enemy")]
-	[SerializeField]private GameObject hitEffect;
+	[Tooltip("Weapon Muzzle flash")]
+	[SerializeField]private ParticleSystem muzzleFlash;
 	[Tooltip("The delay between shots")]
 	[SerializeField]private float timeBetweenShots = .3f;
 	[Tooltip("The speed of the bullet")]
 	[SerializeField]private float bulletSpeed = 100f;
+	[Tooltip("Ammo type ")]
+	[SerializeField]private AmmoType ammoType;
+	[Tooltip("Ammo slot")]
+	[SerializeField]public Ammo ammoSlot;
 	[Tooltip("How far the bullet goes")]
 	public float range = 100f;
+	[Tooltip("The damage the bullet does")]
+	public float damage = 1f;
 	bool canShoot = true;
 	private StarterAssetsInputs input;
+	
 	
 	void Start()
 	{
@@ -29,7 +36,6 @@ public class Weapon : MonoBehaviour
 		canShoot = true;
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		if (input.shoot && canShoot)
@@ -42,7 +48,12 @@ public class Weapon : MonoBehaviour
 	IEnumerator Shoot() 
 	{
 		canShoot = false;
-		ProcessShot();
+		if(ammoSlot.AmmoRemaining(ammoType) > 0) 
+		{	
+			ProcessShot();
+			muzzleFlash.Play();
+			ammoSlot.ReduceAmmo(ammoType);
+		}
 		yield return new WaitForSeconds(timeBetweenShots);
 		canShoot = true;
 	}
@@ -55,13 +66,14 @@ public class Weapon : MonoBehaviour
 			
 		// instantiate the bullet
 		GameObject bullet = Instantiate(bulletPrefab, bulletPoint.transform.position, Quaternion.identity);
-		// GameObject bullet = Instantiate(bulletPrefab, bulletPoint.transform.position, transform.rotation);
 		// Add force and direction
 		bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
 		Debug.DrawRay(bulletPoint.transform.position,bulletPoint.transform.forward * hit.distance, Color.red);
 		//destroy the bullet after a while
-		Debug.Log("Shot the thing");
-		// Destroy(bullet, 1);
+		Destroy(bullet, 1);
+		} else 
+		{
+			return;
 		}
 	}
 }

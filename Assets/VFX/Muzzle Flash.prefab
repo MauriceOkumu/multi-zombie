@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5229245942821085846}
   - component: {fileID: 1729410267591261410}
   m_Layer: 0
-  m_Name: HitEffect
+  m_Name: Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8795921736667261821}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.7439147, y: 2.107973, z: 2.1216116}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.23, y: 3.84, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

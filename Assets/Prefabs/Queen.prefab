@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 6157329600020878654}
   - component: {fileID: 4845073382941009214}
   - component: {fileID: 8034048204023446182}
+  - component: {fileID: 7134673478252375256}
   m_Layer: 0
   m_Name: Queen
   m_TagString: Untagged
@@ -131,7 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad8ee2e5eb58435189c72e6c5bfdf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 8795921736667261821, guid: 1bd0a60fe91ea4c0d93d55d102f88b5e,
+    type: 3}
 --- !u!114 &6157329600020878654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -181,6 +183,26 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &7134673478252375256
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516451011430348933}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &717346533743658898
 GameObject:
   m_ObjectHideFlags: 0

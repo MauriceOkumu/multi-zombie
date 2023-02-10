@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
 	public void TakeDamage(float damage) 
 	{
 		//Provoke the enemy when shot
-		//BroadcastMessage("OnDamageTaken");
+		BroadcastMessage("OnDamageTaken");
 		hitPoints -= damage;
 		if(hitPoints <= 0) DeadZombie();
 	}
@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
 		}
 		isDead = true;
 		// Play the dead animation
-		//<Animator>().SetTrigger("dead");
+		GetComponent<Animator>().SetTrigger("dead");
 	}
 }
 // todo

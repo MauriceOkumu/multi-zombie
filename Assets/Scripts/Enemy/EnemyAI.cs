@@ -14,13 +14,13 @@ public class EnemyAI : MonoBehaviour
 	[Tooltip("The distance to the target")]
 	float targetDistance = Mathf.Infinity;
 	 UnityEngine.AI.NavMeshAgent agent;
-	//  Animator animator;
+	 Animator animator;
 	 EnemyHealth health;
 	 bool isProvoked = false;
 	void Start()
 	{
 		agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-		// animator = GetComponent<Animator>();
+		animator = GetComponent<Animator>();
 		health = GetComponent<EnemyHealth>();
 	}
 
@@ -66,13 +66,13 @@ public class EnemyAI : MonoBehaviour
 	{
 		//should be a bool false
 		// animator.SetTrigger("attack");
-		// animator.SetTrigger("move");
+		animator.SetTrigger("move");
 		 agent.SetDestination(target.position);
 	}
 	private void AttackTarget () 
 	{
 		//should be a bool true
-		// animator.SetTrigger("attack");
+		animator.SetTrigger("attack");
 		Debug.Log("Attacking the player");
 	}
 	 private void OnDrawGizmosSelected() {

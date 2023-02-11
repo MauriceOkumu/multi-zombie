@@ -13,7 +13,6 @@ public class Bullet : MonoBehaviour
 	}
 
 	private void OnCollisionEnter(Collision target) {
-		Debug.Log(target.gameObject.tag);
 		if(target.gameObject.tag == "Enemy") 
 		{
 			if (enemyHealth != null) enemyHealth.TakeDamage(damage);

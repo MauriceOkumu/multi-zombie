@@ -20,7 +20,6 @@ public class EnemyHealth : MonoBehaviour
 	
 	public bool IsDead() 
 	{
-		// Debug.Log("Dead now");
 		return isDead;
 	}
 	

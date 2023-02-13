@@ -10,7 +10,7 @@ public class Slash : MonoBehaviour
 	{
 		slash.enabled = false;
 	}
-
+	
 	IEnumerator Slashed() 
 	{
 		slash.enabled = true;

@@ -18,6 +18,6 @@ public class EnemyAttack : MonoBehaviour
 	{
 		if(target == null) return;
 		target.TakeDamage(damage);
-		// target.GetComponent<Slash>().ShowSlash();
+		target.GetComponent<Slash>().ShowSlash();
 	}
 }

@@ -1461,7 +1461,6 @@ GameObject:
   - component: {fileID: 5630786698087894819}
   - component: {fileID: 5630786698087894825}
   - component: {fileID: 5630786698087894822}
-  - component: {fileID: 5630786698087894821}
   - component: {fileID: 5630786698087894820}
   - component: {fileID: 5630786698087894818}
   m_Layer: 0
@@ -1550,19 +1549,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 8795921736667261821, guid: 1bd0a60fe91ea4c0d93d55d102f88b5e,
     type: 3}
---- !u!114 &5630786698087894821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4820535480020115838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600a76ffc5fb84fe1a9a2bf3bb5aa9a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 3
 --- !u!195 &5630786698087894820
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2310,7 +2296,7 @@ GameObject:
   - component: {fileID: 5042715637093188223}
   m_Layer: 0
   m_Name: mixamorig_Hips
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,21 +6,24 @@ public class Bullet : MonoBehaviour
 {
 	[Tooltip("The damage depends on the type of bullet")]
 	[SerializeField] private float damage = 1f;
-	EnemyHealth enemyHealth;
+	[Tooltip("The score points depends on the type of bullet")]
+	public int scorePoint = 0;
+	public Score score;
+	EnemyHealth enemyHealth;											
 	void Start()
 	{
 		enemyHealth = FindObjectOfType<EnemyHealth>();
+		score = FindObjectOfType<Score>();
 	}
 
 	private void OnCollisionEnter(Collision target) {
 		if(target.gameObject.tag == "Enemy") 
 		{
 			if (enemyHealth != null) enemyHealth.TakeDamage(damage);
-			Debug.Log("I hit the zombie");
+			scorePoint++;
+			score.updateScore(scorePoint);
 		}
+		Debug.Log(target.gameObject.tag);
 	}
 	
 }
-//todo
-// give the bullet damage power
-//update the score accordingly

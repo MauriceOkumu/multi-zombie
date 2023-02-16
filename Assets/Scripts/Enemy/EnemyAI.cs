@@ -24,6 +24,7 @@ public class EnemyAI : MonoBehaviour
 		animator = GetComponent<Animator>();
 		health = GetComponent<EnemyHealth>();
 		 score = FindObjectOfType<Score>();
+		 
 	}
 
 	// Update is called once per frame
@@ -33,6 +34,7 @@ public class EnemyAI : MonoBehaviour
 		{
 			enabled = false;
 			agent.enabled = false;
+			Destroy(gameObject, 4);
 		} else 
 		{
 			
@@ -87,7 +89,7 @@ public class EnemyAI : MonoBehaviour
 	{
 		isProvoked = true;
 		Globals.target_hit++;
-        score.updateScore(Globals.target_hit);
+		score.updateScore(Globals.target_hit);
 	}
 	
 	

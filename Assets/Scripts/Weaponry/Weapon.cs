@@ -26,11 +26,13 @@ public class Weapon : MonoBehaviour
 	public float damage = 1f;
 	bool canShoot = true;
 	private StarterAssetsInputs input;
+	private Recoil recoil;
 	
 	
 	void Start()
 	{
 		input = transform.root.GetComponent<StarterAssetsInputs>();
+		recoil = GetComponent<Recoil>();
 	}
 	private void OnEnable() {
 		canShoot = true;
@@ -53,6 +55,7 @@ public class Weapon : MonoBehaviour
 			ProcessShot();
 			muzzleFlash.Play();
 			ammoSlot.ReduceAmmo(ammoType);
+			recoil.RecoilFire();
 		}
 		yield return new WaitForSeconds(timeBetweenShots);
 		canShoot = true;

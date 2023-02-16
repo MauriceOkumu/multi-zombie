@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42989b3065e774b4c8439d0ce16d0cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
 --- !u!114 &962534822839801323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,6 +640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.504
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106306745751143571, guid: 1b317524b5db24428ae9dab21b42fbbf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b317524b5db24428ae9dab21b42fbbf, type: 3}

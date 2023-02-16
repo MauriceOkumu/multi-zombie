@@ -16,12 +16,14 @@ public class EnemyAI : MonoBehaviour
 	 UnityEngine.AI.NavMeshAgent agent;
 	 Animator animator;
 	 EnemyHealth health;
+	 public Score score;
 	 bool isProvoked = false;
 	void Start()
 	{
 		agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		animator = GetComponent<Animator>();
 		health = GetComponent<EnemyHealth>();
+		 score = FindObjectOfType<Score>();
 	}
 
 	// Update is called once per frame
@@ -84,7 +86,10 @@ public class EnemyAI : MonoBehaviour
 	public void OnDamageTaken() 
 	{
 		isProvoked = true;
+		Globals.target_hit++;
+        score.updateScore(Globals.target_hit);
 	}
+	
 	
 }
 

@@ -95,5 +95,3 @@ public class EnemyAI : MonoBehaviour
 	
 }
 
-//todo
-//disable the enemyAi and navmesh agent if the enemy is dead

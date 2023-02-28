@@ -24,7 +24,9 @@ public class Weapon : MonoBehaviour
 	public float range = 100f;
 	[Tooltip("The damage the bullet does")]
 	public float damage = 1f;
+	[SerializeField] AudioClip clip;
 	bool canShoot = true;
+	AudioSource audiSource;
 	private StarterAssetsInputs input;
 	private Recoil recoil;
 	
@@ -33,6 +35,7 @@ public class Weapon : MonoBehaviour
 	{
 		input = transform.root.GetComponent<StarterAssetsInputs>();
 		recoil = GetComponent<Recoil>();
+		audiSource = GetComponent<AudioSource>();
 	}
 	private void OnEnable() {
 		canShoot = true;
@@ -56,6 +59,8 @@ public class Weapon : MonoBehaviour
 			muzzleFlash.Play();
 			ammoSlot.ReduceAmmo(ammoType);
 			recoil.RecoilFire();
+			// if(!audiSource.isPlaying)audiSource.PlayOneShot(clip);
+			audiSource.PlayOneShot(clip);
 		}
 		yield return new WaitForSeconds(timeBetweenShots);
 		canShoot = true;

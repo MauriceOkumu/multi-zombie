@@ -28,6 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1973614603255908890}
   - {fileID: 3135281113840324722}
   m_Father: {fileID: 8997996947095583982}
   m_RootOrder: 0
@@ -58,13 +59,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4502145913134788320}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.26, z: 2.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: -0.11500001, z: 2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8997996947095583982}
-  m_RootOrder: 2
+  m_Father: {fileID: 4135013735270702856}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1057034295060365068
 Light:
@@ -78,8 +79,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.8396226, g: 0.6667758, b: 0.19406372, a: 1}
-  m_Intensity: 21.7
-  m_Range: 33.2
+  m_Intensity: 50.7
+  m_Range: 34.04
   m_SpotAngle: 67.66534
   m_InnerSpotAngle: 31.28
   m_CookieSize: 10
@@ -160,8 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d53d844f0bb341908e7a0af82714d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightDecay: 0.5
-  angleDecay: 1
+  lightDecay: 0.19
+  angleDecay: 0.2
   minAngle: 40
 --- !u!1 &5393215578589016642
 GameObject:
@@ -293,7 +294,7 @@ Transform:
   - {fileID: 3348526287515011611}
   - {fileID: 7516307827672813355}
   m_Father: {fileID: 4135013735270702856}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &307472939432263333
 MonoBehaviour:
@@ -346,7 +347,6 @@ Transform:
   m_Children:
   - {fileID: 4135013735270702856}
   - {fileID: 5393215578589016641}
-  - {fileID: 1973614603255908890}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
